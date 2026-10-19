@@ -184,7 +184,7 @@ with st.form("formulario_tdah"):
 
     st.divider()
 
-    st.subheader("3. Informações complementares")
+    st.subheader("3. Informações complementares(Pré-diagnostico)")
 
     col6 = st.columns(1)[0]
 
