@@ -84,7 +84,6 @@ def obter_opcoes(prefixo):
     return sorted(valores)
 
 
-opcoes_lateralidade = obter_opcoes("Handedness_")
 opcoes_medicacao = obter_opcoes("Med Status_")
 
 
@@ -189,13 +188,6 @@ with st.form("formulario_tdah"):
 
     col6, col7 = st.columns(2)
 
-    with col6:
-        lateralidade = st.selectbox(
-            "Lateralidade",
-            options=opcoes_lateralidade,
-            help="Valor registrado para preferência manual."
-        )
-
     with col7:
         medicacao = st.selectbox(
             "Situação de medicação",
@@ -234,7 +226,6 @@ if enviar:
 
     # Aplicar codificação categórica
     for prefixo, valor in [
-        ("Handedness_", lateralidade),
         ("Med Status_", medicacao)
     ]:
         chave = prefixo + str(valor).strip().upper()
