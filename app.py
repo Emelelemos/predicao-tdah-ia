@@ -186,7 +186,7 @@ with st.form("formulario_tdah"):
 
     st.subheader("3. Informações complementares")
 
-    col6 = st.columns(1)
+    col6 = st.columns(1)[0]
 
     with col6:
         medicacao = st.selectbox(
